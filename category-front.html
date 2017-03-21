@@ -4,31 +4,23 @@
 <div class="SiteContent">
 	<div class="Container">
 		<div class="Grid">
-			<div class="Col-9-12 Col-Tablet-12-12">
+			<div class="Col-12-12">
 				<div class="ContentSection">
-					<div class="Flex Flex-Collapse">
-						<div class="FlexItem">
-							<h1 class="ContentTitle">{PageTitle}</h1>
-						</div>
-						{Helper(
-							file: 'helpers/pagination-form',
-							before: '
-								<div class="FlexSpacer"></div>
-								<div class="FlexItem">',
-							after: '</div>'
-						)}
-					</div>
+					<h1 class="ContentTitle Text-Center">{PageTitle}</h1>
 					{CategoryImage(
 						width: '1024',
 						before: '<div class="Banner Banner-Body">',
 						after: '</div>'
 					)}
 					{CategoryDescription}
+					{Helper(
+						file: 'helpers/pagination-form'
+					)}
 					{CategoryProducts(
 						type: 'normal',
 						before: '
 							<div class="List ProductList">
-								<div class="GridList">',
+								<div class="GridList GridList-Wide">',
 						after: '
 								</div>
 							</div>
@@ -43,7 +35,7 @@
 						<div class="ContentSection">
 							<h2 class="ContentTitle">{%NewProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList" data-slider="grid-list">',
+								<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
 					after: '
 								</div>
 							</div>
@@ -57,16 +49,13 @@
 						<div class="ContentSection">
 							<h2 class="ContentTitle">{%BestsellingProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList" data-slider="grid-list">',
+								<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
 					after: '
 								</div>
 							</div>
 						</div>',
 					helper: 'helpers/list-product'
 				)}
-			</div>
-			<div class="Col-3-12 Col-Tablet-12-12">
-				{Helper(file: 'helpers/sidebar')}
 			</div>
 		</div>
 	</div>
