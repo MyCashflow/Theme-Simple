@@ -56,6 +56,23 @@
 	padding-top: 40px;
 }
 
+.ContentRow {
+	@extend .Container;
+	margin-top: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.ContentRow + .ContentRow {
+	margin-top: 0;
+}
+
+@media screen and (min-width: $breakpoint-desktop + 1) {
+	.ContentRow {
+		max-width: none;
+	}
+}
+
 //------------------------------------------------------------------------------
 // Sharing
 //------------------------------------------------------------------------------

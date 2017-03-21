@@ -35,6 +35,103 @@
 }
 
 //------------------------------------------------------------------------------
+// Follow
+//------------------------------------------------------------------------------
+
+.Follow > .Flex {
+	@include align-items(flex-start);
+}
+
+.ContentRow.Follow {
+	background-color: #fafafa;
+	border-bottom: 1px solid $color-footer-border;
+	margin-top: 0;
+}
+
+.Follow .NewsletterSubscribe {
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+.Follow #NewsletterSubscribeForm {
+	margin-bottom: 0;
+}
+
+.Follow #NewsletterSubscribeForm label[for=SubscribeEmail] {
+	display: none;
+}
+
+
+//------------------------------------------------------------------------------
+// Follow Buttons
+//------------------------------------------------------------------------------
+
+.FollowButtons {
+	margin-right: 40px;
+	text-align: right;
+}
+
+.FollowButton {
+	background: #333;
+	border-radius: 50%;
+	color: white;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 0 10px 10px;
+	text-align: center;
+	width: 50px;
+
+	&:before {
+		@include icon($fa-var-link);
+		font-size: $font-size-large * 1.5 !important;
+		margin-right: 0 !important;
+		vertical-align: middle;
+	}
+}
+
+.FollowButton.Facebook {
+	@include icon-before($fa-var-facebook);
+}
+
+.FollowButton.GooglePlus {
+	@include icon-before($fa-var-google-plus);
+}
+
+.FollowButton.Instagram {
+	@include icon-before($fa-var-instagram);
+}
+
+.FollowButton.LinkedIn {
+	@include icon-before($fa-var-linkedin);
+}
+
+.FollowButton.Twitter {
+	@include icon-before($fa-var-twitter);
+}
+
+.FollowButton.Tumblr {
+	@include icon-before($fa-var-tumblr);
+}
+
+.FollowButton.YouTube,
+.FollowButton.Youtube {
+	@include icon-before($fa-var-youtube);
+}
+
+.FollowButton.Vimeo {
+	@include icon-before($fa-var-vimeo);
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.FlexItem .FollowButtons {
+		margin-bottom: 40px;
+		margin-right: 0;
+		text-align: center;
+	}
+}
+
+//------------------------------------------------------------------------------
 // Admin Tools
 //------------------------------------------------------------------------------
 

@@ -1,9 +1,31 @@
 				</div>
 				<div class="SiteFooter">
+					<div class="Follow ContentRow ContentSection">
+						<div class="Flex Flex-NoMargin Flex-Center Flex-Collapse">
+							{Banners(
+								name: 'followbuttons',
+								before:'
+								<div class="FlexItem">
+									<div class="FollowButtons">
+									<h3 class="H2">Seuraa meitä</h3>',
+								helper: '{{
+											<a href="{BannerUrl}" class="FollowButton {BannerName}" target="_blank" title="{BannerName}"></a>
+								}}',
+								after:'
+									</div>
+								</div>'
+							)}
+							<div class="FlexItem">
+								<div class="CompactForm NewsletterSubscribe">
+									{NewsletterSubscribeForm}
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="Footer">
 						<div class="Container">
 							<div class="Grid">
-								<div class="Col Col-3-12 Col-Tablet-12-12">
+								<div class="Col Col-6-12 Col-Tablet-12-12">
 									<h2>{%News}</h2>
 									{News(
 										limit: '5',
