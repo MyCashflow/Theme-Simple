@@ -2,10 +2,21 @@
 // Site
 //------------------------------------------------------------------------------
 
+.Site {
+	@include box-shadow(0 0 14px $black-10);
+	background-color: $color-body-bg;
+	margin: 0 auto;
+	max-width: $container-max-width + $grid-gutter * 3;
+}
+
 .SiteHeader {
 	@include link-colors($color-header-bg);
 	background-color: $color-header-bg;
 	color: text-contrast($color-header-bg);
+
+	a {
+		text-decoration: none;
+	}
 }
 
 .SiteBody {
@@ -17,7 +28,33 @@
 	padding: 40px 0 60px;
 }
 
+.Path + .SiteContent {
+	padding-top: 20px;
+}
+
 .SiteFooter {
+	background-color: $color-footer-bg;
 	border-top: 1px solid $color-footer-border;
 	color: text-contrast($color-footer-bg);
+}
+
+.SiteMenu {
+	a {
+		text-decoration: none;
+	}
+
+	li.Current > a {
+		border-bottom: 2px solid;
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.SiteMenu .InlineNavigation li {
+		display: inline;
+		margin: 0 10px;
+	}
+
+	.SiteMenu .InlineNavigation li + li {
+		margin-top: 0;
+	}
 }
