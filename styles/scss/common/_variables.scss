@@ -80,10 +80,11 @@ $icon-select-light:           '../images/angle-down-light.png' !default;
 // Grid System
 //------------------------------------------------------------------------------
 
-$container-max-width:         1200px !default;
+$container-max-width:         1024px !default;
 
 $grid-gutter:                 30px !default;
 $grid-list-gutter:            20px !default;
+$grid-list-gutter-desktop:    60px !default;
 
 $breakpoint-desktop:          1200px !default;
 $breakpoint-tablet:           1024px !default;
