@@ -14,8 +14,7 @@
 }
 
 .ProductImage:hover {
-	@include box-shadow(0 1px 6px $color-accent-2);
-	border-color: $color-accent-2;
+	@include box-shadow(0 1px 6px darken($color-image-border, 5%));
 }
 
 .ProductDiscountPrice {
