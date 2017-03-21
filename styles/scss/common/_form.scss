@@ -382,6 +382,17 @@ form [type='submit'] {
 	width: 50px;
 }
 
+.BrandHeader #SearchInput {
+	border-right: 0;
+}
+
+.BrandHeader #SearchButton {
+	background-color: $color-header-bg;
+	border-color: $color-body-border;
+	border-left-width: 0;
+	color: text-contrast($color-header-bg) !important;
+}
+
 //------------------------------------------------------------------------------
 // Pagination Form
 //------------------------------------------------------------------------------
