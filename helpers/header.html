@@ -31,8 +31,6 @@
 									<div class="InlineNavigation">
 										{CustomerNavigation}
 									</div>
-								</div>
-								<div class="FlexItem">
 									{Search(
 										before: '
 											<div id="LiveSearch">',
@@ -81,33 +79,6 @@
 													<ul>
 														<li class="HasSubCategories">
 															<a>{%Campaigns}</a>',
-										after: '
-														</li>
-													</ul>
-												</div>
-											</div>'
-									)}
-									<div class="FlexItem FlexSpacer"></div>
-									{CurrencyNavigation(
-										before: '
-											<div class="FlexItem">
-												<div class="MainNavigation MainNavigation-Right">
-													<ul>
-														<li class="HasSubCategories">
-															<a>{Currency}</a>',
-										after: '
-														</li>
-													</ul>
-												</div>
-											</div>'
-									)}
-									{LanguageNavigation(
-										before: '
-											<div class="FlexItem">
-												<div class="MainNavigation MainNavigation-Right">
-													<ul>
-														<li class="HasSubCategories">
-															<a>{CurrentLanguage}</a>',
 										after: '
 														</li>
 													</ul>
