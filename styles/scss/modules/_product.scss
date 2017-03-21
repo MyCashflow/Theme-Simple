@@ -35,8 +35,8 @@
 }
 
 .ListProduct .ProductImage {
-	height: 160px;
-	line-height: 138px;
+	height: 260px;
+	line-height: 238px;
 	vertical-align: middle;
 }
 
@@ -52,6 +52,13 @@
 
 .ListProduct .ProductPrices {
 	@include truncate;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.ListProduct .ProductImage {
+		height: 180px;
+		line-height: 158px;
+	}
 }
 
 //------------------------------------------------------------------------------
