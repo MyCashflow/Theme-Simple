@@ -23,11 +23,26 @@
 									<h2>{%ContactUs}</h2>
 									{ContactInformation}
 								</div>
-								<div class="Col Col-3-12 Col-Tablet-12-12">
-									<div class="CompactForm">
-										{NewsletterSubscribeForm}
-									</div>
-								</div>
+							</div>
+						</div>
+					</div>
+					<div class="SiteMenu">
+						<div class="Container">
+							<div class="Flex Flex-Collapse">
+								{CurrencyNavigation(
+									before: '<div class="FlexItem">
+												<div class="InlineNavigation">',
+									after: '	</div>
+											</div>'
+								)}
+								<div class="FlexItem FlexSpacer"></div>
+								{LanguageNavigation(
+									showcurrent: 'true',
+									before: '<div class="FlexItem">
+												<div class="InlineNavigation">',
+									after: '	</div>
+											</div>'
+								)}
 							</div>
 						</div>
 					</div>
