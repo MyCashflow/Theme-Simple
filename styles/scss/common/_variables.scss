@@ -41,17 +41,18 @@ $color-error:                 #dd3333 !default;
 
 $color-text-light:            #fefefe !default;
 $color-text-dark:             #5a5a5a !default;
+$color-text-subtle:           #9a9a9a !default;
 
 $color-link-light:            #fafafa !default;
 $color-link-dark:             #5a5a5a !default;
 
 $color-discount:              $color-accent-2 !default;
 
-$color-document-bg:           $color-base-1 !default;
+$color-document-bg:           $color-base-2 !default;
 $color-body-bg:               $color-base-1 !default;
-$color-header-bg:             $color-base-2 !default;
-$color-footer-bg:             $color-base-2 !default;
-$color-navbar-bg:             $color-base-2 !default;
+$color-header-bg:             $color-base-1 !default;
+$color-footer-bg:             $color-base-1 !default;
+$color-navbar-bg:             $color-base-1 !default;
 $color-path-bg:               $color-base-2 !default;
 $color-drawer-bg:             $color-base-2 !default;
 $color-boxed-bg:              #fafafa !default;
