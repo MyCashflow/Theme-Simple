@@ -5,6 +5,17 @@
 .Breadcrumb {
 	@extend %default-margin;
 	@include truncate;
+	color: $color-text-subtle;
+	font-size: $font-size-small;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: $color-text-dark;
+	}
 }
 
 .Breadcrumb ul,
@@ -31,6 +42,7 @@
 
 .Path {
 	padding-top: 20px;
+	text-align: center;
 }
 
 .Path .Breadcrumb {
