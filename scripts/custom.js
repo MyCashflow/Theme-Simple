@@ -202,24 +202,24 @@ $(document).ready(function () {
 			slidesToShow: 1
 		},
 		'grid-list': {
-			slidesToShow: 5,
+			slidesToShow: 2,
 			responsive: [
-				{ breakpoint: MCF.Theme.breakpoints['desktop'] + 1, settings: { slidesToShow: 4 } },
+				{ breakpoint: MCF.Theme.breakpoints['desktop'] + 1, settings: { slidesToShow: 2 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
 			]
 		},
 		'grid-list-narrow': {
-			slidesToShow: 4,
+			slidesToShow: 2,
 			responsive: [
 				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
 			]
 		},
 		'grid-list-wide': {
-			slidesToShow: 6,
+			slidesToShow: 3,
 			responsive: [
-				{ breakpoint: MCF.Theme.breakpoints['desktop'] + 1, settings: { slidesToShow: 4 } },
+				{ breakpoint: MCF.Theme.breakpoints['desktop'] + 1, settings: { slidesToShow: 3 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
 			]

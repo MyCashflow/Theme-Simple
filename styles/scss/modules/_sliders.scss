@@ -22,13 +22,13 @@
 .slick-prev {
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
-	right: 55px;
+	right: 75px;
 }
 
 .slick-next {
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
-	right: 15px;
+	right: 35px;
 }
 
 .slick-slide:focus {
@@ -37,4 +37,14 @@
 
 .slick-slide img {
 	display: inline-block;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.slick-prev {
+		right: 55px;
+	}
+
+	.slick-next {
+		right: 15px;
+	}
 }
