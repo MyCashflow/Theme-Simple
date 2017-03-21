@@ -164,6 +164,10 @@
 	margin-bottom: 0;
 }
 
+.Flex-Center {
+	@include justify-content(center);
+}
+
 @media screen and (max-width: $breakpoint-mobile) {
 	.Flex-Collapse {
 		display: block;
