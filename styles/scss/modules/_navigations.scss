@@ -269,20 +269,26 @@
 
 .MainNavigation {
 	@extend .DropNavigation;
+	font-family: $font-headings;
 }
 
 .MainNavigation-Right {
 	@extend .DropNavigation-Right;
 }
 
+.MainNavigation,
+.MainNavigation li a {
+	color: text-contrast($color-navbar-bg);
+}
+
 .MainNavigation li ul {
-	border: 1px solid $color-body-border;
+	border: 1px solid lighten($color-navbar-border, 5%);
 	box-shadow: 0 1px 2px $black-10;
 }
 
 .MainNavigation li li a {
 	background-color: $color-navbar-bg;
-	border: 1px solid $color-body-border;
+	border: 1px solid lighten($color-navbar-border, 5%);
 	border-width: 1px 0 0;
 }
 
