@@ -3,12 +3,12 @@
 <div class="SiteContent">
 	<div class="Container">
 		<div class="Grid ProductCard {ProductClass}">
-			<div class="Col Col-4-12 Col-Tablet-12-12">
+			<div class="Col Col-5-12 Col-Tablet-12-12">
 				{ProductImage}
 				{ProductImageCaption}
 				{ProductThumbnails}
 			</div>
-			<div class="Col Col-8-12 Col-Tablet-12-12">
+			<div class="Col Col-7-12 Col-Tablet-12-12">
 				<div class="ContentSection">
 					<h1>{PageTitle}</h1>
 					<p class="Text-Large ProductPrices ProductCardPrices">
@@ -51,7 +51,7 @@
 					<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
 				</div>
 				{CrossSaleProducts(
-					limit: '12',
+					limit: '6',
 					type: 'normal',
 					helper: 'helpers/list-product',
 					before: '
@@ -65,7 +65,7 @@
 						</div>'
 				)}
 				{SimilarProducts(
-					limit: '12',
+					limit: '6',
 					type: 'normal',
 					helper: 'helpers/list-product',
 					before: '
@@ -79,7 +79,7 @@
 						</div>'
 				)}
 				{CompatibleProducts(
-					limit: '12',
+					limit: '6',
 					type: 'normal',
 					helper: 'helpers/list-product',
 					before: '
