@@ -3,10 +3,9 @@
 //------------------------------------------------------------------------------
 
 .NavigationBar {
-	@include box-shadow(0 1px 3px $black-10);
-	background-color: $color-navbar-bg;
-	border: 1px solid $color-navbar-border;
-	border-width: 1px 0;
+	@include box-shadow(0 1px 4px -1px $black-10);
+	background-color: $color-header-bg;
+	border-bottom: 1px solid $color-navbar-border;
 	font-size: $font-size-large;
 	position: relative;
 	z-index: 100;
@@ -28,6 +27,18 @@
 
 .NavigationBarToggle-Right {
 	margin-right: -15px;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.NavigationBar {
+		@include box-shadow(0 1px 3px $black-10);
+		background-color: $color-base-2;
+		border: 1px solid $color-navbar-border;
+		border-width: 1px 0;
+		font-size: $font-size-large;
+		position: relative;
+		z-index: 100;
+	}
 }
 
 //------------------------------------------------------------------------------
