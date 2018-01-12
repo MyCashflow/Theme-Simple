@@ -1,0 +1,36 @@
+{Helper(file: 'helpers/header')}
+{Helper(file: 'helpers/category-header')}
+{Helper(file: 'helpers/path')}
+<div class="SiteContent">
+	<div class="Container">
+		<div class="Grid">
+			<div class="Col-12-12">
+				<div class="ContentSection">
+					<h1 class="ContentTitle Text-Center">{PageTitle} - Single</h1>
+					{CategoryImage(
+						width: '1024',
+						before: '<div class="Banner Banner-Body">',
+						after: '</div>'
+					)}
+					{CategoryDescription}
+					{Helper(
+						file: 'helpers/pagination-form'
+					)}
+					{Products(
+						pagination: 'false',
+						type: 'normal',
+						before: '
+							<div class="List ProductList">
+								<div class="GridList GridList-Wide">',
+						after: '
+								</div>
+							</div>
+							{Helper(file: 'helpers/pagination')}',
+						helper: 'helpers/list-product'
+					)}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}
