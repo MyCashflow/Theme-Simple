@@ -110,6 +110,16 @@
 	vertical-align: middle;
 }
 
+.Banners-Wide .slick-arrow {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.Banners-Wide:hover .slick-arrow {
+	opacity: 1;
+	visibility: visible;
+}
+
 @media screen and (max-width: $breakpoint-tablet) {
 	.Banners-Wide,
 	.Banner-Wide,

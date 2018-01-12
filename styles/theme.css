@@ -2206,7 +2206,7 @@ hr {
 
 body {
   color: #5a5a5a;
-  font: 14px/24px "Open Sans", sans-serif; }
+  font: 14px/24px "Roboto", sans-serif; }
 
 button, input, select, textarea {
   color: inherit;
@@ -2388,6 +2388,14 @@ form .Active[type='submit'],
 .Buttons-Block .Button + .Button, .Buttons-Block form button + .Button, form .Buttons-Block button + .Button, .Buttons-Block #OrderDocuments a + .Button, #OrderDocuments .Buttons-Block a + .Button, .Buttons-Block form .Button + button, form .Buttons-Block .Button + button, .Buttons-Block form button + button, form .Buttons-Block button + button, .Buttons-Block #OrderDocuments form a + button, form .Buttons-Block #OrderDocuments a + button, #OrderDocuments .Buttons-Block form a + button, form #OrderDocuments .Buttons-Block a + button, .Buttons-Block #OrderDocuments .Button + a, #OrderDocuments .Buttons-Block .Button + a, .Buttons-Block form #OrderDocuments button + a, #OrderDocuments .Buttons-Block form button + a, form .Buttons-Block #OrderDocuments button + a, #OrderDocuments form .Buttons-Block button + a, .Buttons-Block #OrderDocuments a + a, #OrderDocuments .Buttons-Block a + a {
   margin-top: 5px; }
 
+.Button.IconButton .fa, form button.IconButton .fa, #OrderDocuments a.IconButton .fa {
+  margin: 0; }
+
+.Button .SeparatedSection, form button .SeparatedSection, #OrderDocuments a .SeparatedSection {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  margin-left: 10px;
+  padding-left: 10px; }
+
 .ShippingMethodWrapper,
 .PaymentMethodWrapper {
   background-color: #fafafa;
@@ -2538,10 +2546,12 @@ form .Active[type='submit'],
   display: none; }
 
 #SearchForm #SearchInput {
+  height: 39px;
   width: calc(100% - 50px); }
 
 #SearchForm #SearchButton {
   font-size: 0;
+  height: 39px;
   width: 50px; }
   #SearchForm #SearchButton:before {
     display: inline-block;
@@ -3423,7 +3433,7 @@ form .Active[type='submit'],
 
 .ContentRow.Follow {
   background-color: #fafafa;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid #eaeaea;
   margin-top: 0; }
 
 .Follow .NewsletterSubscribe {
@@ -3650,6 +3660,14 @@ form .Active[type='submit'],
   display: table-cell;
   vertical-align: middle; }
 
+.Banners-Wide .slick-arrow {
+  opacity: 0;
+  visibility: hidden; }
+
+.Banners-Wide:hover .slick-arrow {
+  opacity: 1;
+  visibility: visible; }
+
 @media screen and (max-width: 1024px) {
   .Banners-Wide,
   .Banner-Wide,
@@ -3695,6 +3713,7 @@ form .Active[type='submit'],
   display: none; }
 
 .Path {
+  margin-bottom: 15px;
   padding-top: 20px;
   text-align: center; }
 
@@ -3858,6 +3877,11 @@ form .Active[type='submit'],
 .MiniCart-Checkout .OrderProducts {
   display: none !important; }
 
+.MiniCartButton .SeparatedSection {
+  border-left: 1px solid #659100;
+  margin-left: 10px;
+  padding-left: 10px; }
+
 .CheckoutTransferToPaymentForm {
   display: inline-block;
   margin: 0 5px 10px 0;
@@ -3941,7 +3965,6 @@ form .Active[type='submit'],
   -ms-transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
-  border-bottom: 1px solid #dadada;
   top: 0; }
 
 .Drawer[data-drawer-side='bottom'] {
@@ -3949,7 +3972,6 @@ form .Active[type='submit'],
   -ms-transform: translateY(100%);
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
-  border-top: 1px solid #dadada;
   bottom: 0; }
 
 .Drawer[data-drawer-side='left'] {
@@ -3957,7 +3979,6 @@ form .Active[type='submit'],
   -ms-transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  border-right: 1px solid #dadada;
   left: 0; }
 
 .Drawer[data-drawer-side='right'] {
@@ -3965,7 +3986,6 @@ form .Active[type='submit'],
   -ms-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  border-left: 1px solid #dadada;
   right: 0; }
 
 .Drawer[data-drawer-side='top'].Open {
@@ -4036,23 +4056,30 @@ form .Active[type='submit'],
   z-index: 1000; }
 
 .DrawerOverlay.Visible {
-  opacity: 0.25;
+  opacity: 0.3;
   visibility: visible; }
 
 .Footer {
   padding: 40px 0; }
 
 .FooterCopy .Copyright {
-  border-top: 1px solid #dadada;
-  padding: 20px 0; }
+  border-top: 1px solid #eaeaea;
+  margin-top: 10px;
+  padding: 10px 0; }
 
-.Footer #NewsletterSubscribeForm label {
+@media screen and (max-width: 600px) {
+  .SiteFooter .SiteMenu .InlineNavigation {
+    margin-left: -10px;
+    margin-right: -10px; } }
+
+.SiteFooter #NewsletterSubscribeForm label {
   display: none; }
 
-.Footer #NewsletterSubscribeForm input {
+.SiteFooter #NewsletterSubscribeForm input {
+  border-right-width: 0;
   width: 65%; }
 
-.Footer #NewsletterSubscribeForm button {
+.SiteFooter #NewsletterSubscribeForm button {
   width: 35%; }
 
 .BrandHeader {
@@ -4072,14 +4099,26 @@ form .Active[type='submit'],
   text-align: right;
   margin-bottom: 10px; }
 
+.NavigationBar .CartButton {
+  margin-right: -36px;
+  opacity: 0;
+  transition: all 0.15s ease;
+  visibility: hidden; }
+
+.NavigationBar.sticky .CartButton {
+  opacity: 1;
+  visibility: visible; }
+
 .LiveSearch {
   position: relative; }
 
+.LiveSearch.Active input {
+  border-bottom-left-radius: 0; }
+
+.LiveSearch.Active button {
+  border-bottom-right-radius: 0; }
+
 .LiveSearch.Active .LiveSearchResults {
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
   opacity: 1;
   padding: 10px 0;
   visibility: visible; }
@@ -4093,26 +4132,26 @@ form .Active[type='submit'],
   margin: 15px 0; }
 
 .LiveSearchResults {
-  -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 -1px #ffffff, 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 -1px #ffffff, 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -1px #ffffff, 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px #ffffff, 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
   -moz-transition: 0.15s;
   -ms-transition: 0.15s;
   -webkit-transition: 0.15s;
   transition: 0.15s;
-  -moz-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  -webkit-transform: translateY(20px);
-  transform: translateY(20px);
   background-color: #ffffff;
   border-radius: 2px;
-  margin-top: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-left: 1px;
+  margin-top: 1px;
   opacity: 0;
   position: absolute;
   top: 100%;
   visibility: hidden;
-  width: 100%;
+  width: calc(100% - 2px);
   z-index: 1000; }
 
 .LiveSearchResults ul {
@@ -4120,6 +4159,9 @@ form .Active[type='submit'],
   margin: 0; }
 
 .LiveSearchResults a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   display: block;
   padding: 5px 15px; }
 
@@ -4133,6 +4175,20 @@ form .Active[type='submit'],
   .LiveSearchResults .SearchFilter {
     display: block;
     margin: 0; } }
+
+.SearchPopularTerms {
+  padding: 0 15px; }
+
+.SearchPopularTerms li {
+  display: inline-block;
+  margin: 0px 5px 5px 0px; }
+
+.SearchPopularTerms li a,
+.SearchPopularTerms li a:hover {
+  background: #ededed;
+  border-radius: 2px;
+  display: block;
+  padding: 2px 5px; }
 
 .Loader {
   bottom: 0;
@@ -4196,6 +4252,10 @@ form .Active[type='submit'],
   right: 5px;
   top: 5px; }
 
+.NavigationBarToggle .Badge {
+  bottom: -10px;
+  top: auto; }
+
 .LogoLink {
   display: inline-block;
   margin: 0 !important;
@@ -4240,13 +4300,30 @@ form .Active[type='submit'],
 .mfp-ajax-content :last-child {
   margin-bottom: 0; }
 
+.CampaignCodeForm input {
+  border-right: 0; }
+
+.CartShareLink input {
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  display: block;
+  margin-left: 15px;
+  width: 100%; }
+
+.CartShareLink button {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
+
+.CartShareLink button > .fa {
+  margin: 0; }
+
 .NavigationBar {
-  -moz-box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 -3px #ffffff, 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 -3px #ffffff, 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -3px #ffffff, 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -3px #ffffff, 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-  border-bottom: 1px solid #dadada;
   font-size: 16px;
   position: relative;
   z-index: 100; }
@@ -4265,15 +4342,16 @@ form .Active[type='submit'],
 .NavigationBarToggle-Right {
   margin-right: -15px; }
 
+.NavigationBar .MainNavigation li ul {
+  border-top-width: 0; }
+
 @media screen and (max-width: 1024px) {
   .NavigationBar {
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 -3px #ffffff, 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 -3px #ffffff, 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 -3px #ffffff, 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -3px #ffffff, 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.1);
     background-color: #fafafa;
-    border: 1px solid #dadada;
-    border-width: 1px 0;
     font-size: 16px;
     position: relative;
     z-index: 100; } }
@@ -4494,16 +4572,35 @@ form .Active[type='submit'],
   color: #5a5a5a; }
 
 .MainNavigation li ul {
-  border: 1px solid #e7e7e7;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+  background-color: #ffffff;
+  -moz-box-shadow: 0 -3px #ffffff, 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 -3px #ffffff, 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -3px #ffffff, 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -3px #ffffff, 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  margin-top: 2px;
+  padding: 5px 0; }
+
+.MainNavigation li ul ul {
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  margin-left: 2px;
+  margin-top: -5px; }
+
+.MainNavigation li ul ul li:first-child:before {
+  background: #ffffff;
+  bottom: -5px;
+  content: '';
+  display: block;
+  left: -2px;
+  position: absolute;
+  top: -5px;
+  width: 2px;
+  z-index: 1000; }
 
 .MainNavigation li li a {
-  background-color: #ffffff;
-  border: 1px solid #e7e7e7;
-  border-width: 1px 0 0; }
-
-.MainNavigation li li:first-child a {
-  border-width: 0; }
+  padding: 5px 15px; }
 
 .MainNavigation .Current > a {
   color: #ee5500; }
@@ -4766,7 +4863,7 @@ form .Active[type='submit'],
 
 .ProductImage, #ProductThumbnails .ProductThumbnail {
   background-color: #ffffff;
-  border: 1px solid #dadada;
+  border: 1px solid #eaeaea;
   border-radius: 2px;
   display: block;
   margin-bottom: 10px;
@@ -4775,10 +4872,10 @@ form .Active[type='submit'],
   transition-duration: 0.15s; }
 
 .ProductImage:hover, #ProductThumbnails .ProductThumbnail:hover {
-  -moz-box-shadow: 0 1px 6px #cdcdcd;
-  -ms-box-shadow: 0 1px 6px #cdcdcd;
-  -webkit-box-shadow: 0 1px 6px #cdcdcd;
-  box-shadow: 0 1px 6px #cdcdcd; }
+  -moz-box-shadow: 0 1px 6px #dddddd;
+  -ms-box-shadow: 0 1px 6px #dddddd;
+  -webkit-box-shadow: 0 1px 6px #dddddd;
+  box-shadow: 0 1px 6px #dddddd; }
 
 .ProductDiscountPrice {
   color: #ee5500; }
@@ -4937,8 +5034,11 @@ form .Active[type='submit'],
 #MobileSearchForm label {
   display: none; }
 
+#MobileSearchForm input {
+  border-right: 0; }
+
 .slick-arrow {
-  line-height: 20px;
+  line-height: 25px;
   padding: 4px;
   position: absolute;
   width: 40px;
@@ -4949,11 +5049,12 @@ form .Active[type='submit'],
 
 .slick-prev,
 .slick-next {
-  bottom: 15px; }
+  bottom: 35px; }
 
 .slick-prev {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  border-right-width: 0;
   right: 75px; }
 
 .slick-next {
@@ -5058,8 +5159,9 @@ form .Active[type='submit'],
 
 .SiteFooter {
   background-color: #ffffff;
-  border-top: 1px solid #dadada;
-  color: #5a5a5a; }
+  border-top: 1px solid #eaeaea;
+  color: #5a5a5a;
+  padding-bottom: 30px; }
 
 .SiteMenu a {
   text-decoration: none; }

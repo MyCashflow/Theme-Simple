@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 .slick-arrow {
-	line-height: 20px;
+	line-height: 25px;
 	padding: 4px;
 	position: absolute;
 	width: 40px;
@@ -16,12 +16,13 @@
 
 .slick-prev,
 .slick-next {
-	bottom: 15px;
+	bottom: 35px;
 }
 
 .slick-prev {
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
+	border-right-width: 0;
 	right: 75px;
 }
 

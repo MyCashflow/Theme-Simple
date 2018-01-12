@@ -27,25 +27,21 @@
 
 .Drawer[data-drawer-side='top'] {
 	@include transform(translateY(-100%));
-	border-bottom: 1px solid $color-drawer-border;
 	top: 0;
 }
 
 .Drawer[data-drawer-side='bottom'] {
 	@include transform(translateY(100%));
-	border-top: 1px solid $color-drawer-border;
 	bottom: 0;
 }
 
 .Drawer[data-drawer-side='left'] {
 	@include transform(translateX(-100%));
-	border-right: 1px solid $color-drawer-border;
 	left: 0;
 }
 
 .Drawer[data-drawer-side='right'] {
 	@include transform(translateX(100%));
-	border-left: 1px solid $color-drawer-border;
 	right: 0;
 }
 
@@ -106,6 +102,6 @@
 }
 
 .DrawerOverlay.Visible {
-	opacity: 0.25;
+	opacity: 0.3;
 	visibility: visible;
 }

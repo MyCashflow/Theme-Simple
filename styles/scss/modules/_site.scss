@@ -36,6 +36,7 @@
 	background-color: $color-footer-bg;
 	border-top: 1px solid $color-footer-border;
 	color: text-contrast($color-footer-bg);
+	padding-bottom: $grid-gutter;
 }
 
 .SiteMenu {
