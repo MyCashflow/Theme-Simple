@@ -148,6 +148,20 @@ form [type='submit'] {
 }
 
 //------------------------------------------------------------------------------
+// Button helpers
+//------------------------------------------------------------------------------
+
+.Button.IconButton .fa {
+	margin: 0;
+}
+
+.Button .SeparatedSection {
+	border-left: 1px solid $black-25;
+	margin-left: ($grid-list-gutter / 2);
+	padding-left: ($grid-list-gutter / 2);
+}
+
+//------------------------------------------------------------------------------
 // Method Wrappers
 //------------------------------------------------------------------------------
 
@@ -374,11 +388,13 @@ form [type='submit'] {
 }
 
 #SearchForm #SearchInput {
+	height: 39px;
 	width: calc(100% - 50px);
 }
 
 #SearchForm #SearchButton {
 	@include icon-replace($fa-var-search);
+	height: 39px;
 	width: 50px;
 }
 

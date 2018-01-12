@@ -190,3 +190,9 @@
 .MiniCart-Checkout .OrderProducts {
 	display: none !important;
 }
+
+.MiniCartButton .SeparatedSection {
+	border-left: 1px solid darken($color-accent-1, 5%);
+	margin-left: ($grid-list-gutter / 2);
+	padding-left: ($grid-list-gutter / 2);
+}

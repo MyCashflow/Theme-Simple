@@ -22,3 +22,20 @@
 	text-align: right;
 	margin-bottom: 10px;
 }
+
+
+//------------------------------------------------------------------------------
+// Navigation bar
+//------------------------------------------------------------------------------
+
+.NavigationBar .CartButton {
+	margin-right: -($grid-gutter + 6px);
+	opacity: 0;
+	transition: all $transition-fast ease;
+	visibility: hidden;
+}
+
+.NavigationBar.sticky .CartButton {
+	opacity: 1;
+	visibility: visible;
+}

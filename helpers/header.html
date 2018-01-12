@@ -51,9 +51,10 @@
 												</div>
 											</div>'
 									)}
-									<a href="/cart/" class="Button Button-Primary" data-drawer-toggle="cart">
+									<a href="/cart/" class="Button Button-Primary MiniCartButton" data-drawer-toggle="cart">
 										<span class="fa fa-shopping-cart"></span>
 										{%ShoppingCart}
+										<span class="SeparatedSection CartTotal">{CartTotal}</span>
 									</a>
 								</div>
 							</div>
@@ -63,6 +64,7 @@
 						<div class="Container">
 							<div class="Hide-Tablet">
 								<div class="Flex Flex-NoMargin Flex-Center">
+									<div class="FlexItem-Grow"></div>
 									{Categories(
 										show: 'all',
 										before: '
@@ -85,6 +87,26 @@
 												</div>
 											</div>'
 									)}
+									{InfoNavigation(
+										show: 'all',
+										before: '
+											<div class="FlexItem">
+												<div class="MainNavigation MainNavigation-Left">',
+										after: '
+												</div>
+											</div>'
+									)}
+									<div class="FlexItem-Grow">
+										<div class="Flex Flex-NoMargin">
+											<div class="FlexItem-Grow"></div>
+											<div class="FlexItem CartButton">
+												<a href="/cart/" class="Button IconButton Button-Primary MiniCartButton" data-drawer-toggle="cart">
+													<span class="fa fa-shopping-cart"></span>
+													<span class="SeparatedSection CartTotal">{CartTotal}</span>
+												</a>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="Hide-Desktop">
@@ -100,6 +122,7 @@
 									<div class="FlexItem">
 										<a href="#" class="NavigationBarToggle NavigationBarToggle-Right" data-drawer-toggle="cart">
 											<span class="fa fa-shopping-cart"></span>
+											<span class="Badge CartTotal">{CartTotal}</span>
 										</a>
 									</div>
 								</div>

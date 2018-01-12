@@ -8,21 +8,30 @@
 
 .FooterCopy .Copyright {
 	border-top: 1px solid $color-footer-border;
-	padding: 20px 0;
+	margin-top: 10px;
+	padding: 10px 0;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.SiteFooter .SiteMenu .InlineNavigation {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
 }
 
 //------------------------------------------------------------------------------
 // Newsletter Subscribe Form
 //------------------------------------------------------------------------------
 
-.Footer #NewsletterSubscribeForm label {
+.SiteFooter #NewsletterSubscribeForm label {
 	display: none;
 }
 
-.Footer #NewsletterSubscribeForm input {
+.SiteFooter #NewsletterSubscribeForm input {
+	border-right-width: 0;
 	width: 65%;
 }
 
-.Footer #NewsletterSubscribeForm button {
+.SiteFooter #NewsletterSubscribeForm button {
 	width: 35%;
 }

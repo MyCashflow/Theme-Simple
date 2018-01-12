@@ -43,14 +43,17 @@
 								</div>
 								<div class="Col Col-3-12 Col-Tablet-12-12">
 									<h2>{%ContactUs}</h2>
-									{ContactInformation}
+									{BannerText(
+										name: 'ContactInformation',
+										or: '{ContactInformation}'
+									)}
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="SiteMenu">
 						<div class="Container">
-							<div class="Flex Flex-Collapse">
+							<div class="Flex Flex-NoMargin Flex-Collapse">
 								{CurrencyNavigation(
 									before: '<div class="FlexItem">
 												<div class="InlineNavigation">',
@@ -71,7 +74,7 @@
 					<div class="FooterCopy">
 						<div class="Container">
 							<div class="Copyright">
-								<div class="Flex Flex-Collapse">
+								<div class="Flex Flex-NoMargin Flex-Collapse">
 									<div class="FlexItem">
 										Copyright &copy; {ShopName}
 									</div>

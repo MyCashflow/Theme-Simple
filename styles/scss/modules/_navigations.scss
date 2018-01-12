@@ -3,9 +3,11 @@
 //------------------------------------------------------------------------------
 
 .NavigationBar {
-	@include box-shadow(0 1px 4px -1px $black-10);
+	@include box-shadow(
+		0 -3px $color-header-bg,
+		0 1px $black-10,
+		0 1px 4px -1px $black-10);
 	background-color: $color-header-bg;
-	border-bottom: 1px solid $color-navbar-border;
 	font-size: $font-size-large;
 	position: relative;
 	z-index: 100;
@@ -29,12 +31,17 @@
 	margin-right: -15px;
 }
 
+.NavigationBar .MainNavigation li ul {
+	border-top-width: 0;
+}
+
 @media screen and (max-width: $breakpoint-tablet) {
 	.NavigationBar {
-		@include box-shadow(0 1px 3px $black-10);
+		@include box-shadow(
+			0 -3px $color-header-bg,
+			0 1px $black-10,
+			0 1px 4px -1px $black-10);
 		background-color: $color-base-2;
-		border: 1px solid $color-navbar-border;
-		border-width: 1px 0;
 		font-size: $font-size-large;
 		position: relative;
 		z-index: 100;
@@ -282,18 +289,37 @@
 }
 
 .MainNavigation li ul {
-	border: 1px solid lighten($color-navbar-border, 5%);
-	box-shadow: 0 1px 2px $black-10;
+	background-color: $color-navbar-bg;
+	@include box-shadow(
+		0 -3px $color-navbar-bg,
+		0 1px 2px $black-10,
+		0 0 0 1px $black-10);
+	margin-top: 2px;
+	padding: 5px 0;
+}
+
+.MainNavigation li ul ul {
+	@include box-shadow(
+		0 1px 2px $black-10,
+		0 0 0 1px $black-10);
+	margin-left: 2px;
+	margin-top: -5px;
+}
+
+.MainNavigation li ul ul li:first-child:before {
+	background: $color-navbar-bg;
+	bottom: -5px;
+	content: '';
+	display: block;
+	left: -2px;
+	position: absolute;
+	top: -5px;
+	width: 2px;
+	z-index: 1000;
 }
 
 .MainNavigation li li a {
-	background-color: $color-navbar-bg;
-	border: 1px solid lighten($color-navbar-border, 5%);
-	border-width: 1px 0 0;
-}
-
-.MainNavigation li li:first-child a {
-	border-width: 0;
+	padding: 5px 15px;
 }
 
 .MainNavigation .Current > a {

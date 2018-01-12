@@ -6,8 +6,15 @@
 	position: relative;
 }
 
+.LiveSearch.Active input {
+	border-bottom-left-radius: 0;
+}
+
+.LiveSearch.Active button {
+	border-bottom-right-radius: 0;
+}
+
 .LiveSearch.Active .LiveSearchResults {
-	@include transform(translateY(0));
 	opacity: 1;
 	padding: 10px 0;
 	visibility: visible;
@@ -29,17 +36,23 @@
 //------------------------------------------------------------------------------
 
 .LiveSearchResults {
-	@include box-shadow(0 2px 1px $black-10);
+	@include box-shadow(
+		0 -1px $color-body-bg,
+		0 1px 1px $black-10,
+		0 0 0 1px $black-10);
 	@include transition($transition-fast);
-	@include transform(translateY(20px));
 	background-color: $color-body-bg;
 	border-radius: $border-radius;
-	margin-top: 5px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	font-family: $font-base-1;
+	margin-left: 1px;
+	margin-top: 1px;
 	opacity: 0;
 	position: absolute;
 	top: 100%;
 	visibility: hidden;
-	width: 100%;
+	width: calc(100% - 2px);
 	z-index: 1000;
 }
 
@@ -49,6 +62,7 @@
 }
 
 .LiveSearchResults a {
+	@include truncate;
 	display: block;
 	padding: 5px 15px;
 }
@@ -65,4 +79,25 @@
 		display: block;
 		margin: 0;
 	}
+}
+
+//
+//
+//
+
+.SearchPopularTerms {
+	padding: 0 15px;
+}
+
+.SearchPopularTerms li {
+	display: inline-block;
+	margin: 0px 5px 5px 0px;
+}
+
+.SearchPopularTerms li a,
+.SearchPopularTerms li a:hover {
+	background: darken($color-base-2, 5%);
+	border-radius: $border-radius;
+	display: block;
+	padding: 2px 5px;
 }
