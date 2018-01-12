@@ -1,8 +1,10 @@
-{SearchSuggestions(limit: '5')}
+{SearchSuggestions(
+	limit: '5',
+	after: '<div class="LiveSearchSeparator"></div>'
+)}
 {SearchProducts(
 	limit: '5',
 	before: '
-		<div class="LiveSearchSeparator"></div>
 		<h3 class="LiveSearchTitle">{%SearchProductsTitle} &ldquo;{SearchKeyword}&rdquo;</h3>
 		<ul class="SearchResults">',
 	after: '</ul>',
