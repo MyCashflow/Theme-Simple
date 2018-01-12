@@ -65,7 +65,8 @@ $(document).ready(function () {
 
 		updateMiniCarts: function () {
 			var $miniCarts = $('.MiniCart');
-			if (!$miniCarts.length) {
+			var $cartTotals = $('.CartTotal');
+			if (!$miniCarts.length && !$cartTotals.length) {
 				return;
 			}
 			$miniCarts.each(function () {
@@ -75,6 +76,14 @@ $(document).ready(function () {
 					MCF.Loaders.show($cart);
 				}
 			});
+			$.get('/interface/CartTotal')
+				.then(function (html) {
+					$cartTotals.each(function () {
+						var $total = $(this);
+						$total.children(':not(.Loader)').remove();
+						$total.html(html);
+					});
+				});
 			return $.get('/interface/Helper?file=helpers/mini-cart')
 				.then(function (html) {
 					$miniCarts.each(function () {
@@ -139,6 +148,11 @@ $(document).ready(function () {
 		afterUpdatePart: function ($part) {
 			MCF.Loaders.hide($part);
 		}
+	});
+
+	MCF.CopyClipboard.init({
+		container: '.CartShareLink input',
+		button: '.CartShareLink button'
 	});
 
 	MCF.KlarnaCheckout.init({
@@ -259,4 +273,49 @@ $(document).ready(function () {
 		top: 80,
 		bottomEnd: 80
 	});
+
+	/**
+	 * Sticky product images
+	 * Stickiniess will be removed after breakpoint
+	 */
+
+	if ($('.ProductImages.Sticky').length) {
+		$(window).on('resize', function(){
+			var $productImages = $('.ProductImages.Sticky');
+			var stickinessBreakPointName = $productImages.attr('data-sticky-breakpoint');
+
+			if ($(window).width() <= MCF.Theme.breakpoints[stickinessBreakPointName]) {
+				if (!$productImages.hasClass('Sticky-Active')) {
+					return; // no change, prevent further execution
+				}
+				// remove product image stickiness
+				$productImages
+					.removeClass('Sticky-Active')
+					.removeAttr('style') // hcSticky bug fix; won't clear inline styles after destory
+					.hcSticky('destroy');
+			}
+			else {
+				if ($productImages.hasClass('Sticky-Active')) {
+					return; // no change, prevent further execution
+				}
+				// activate product image stickiness
+				$productImages.hcSticky({
+					stickTo: '.ProductCard',
+					top: 80,
+					bottomEnd: 0
+				})
+				.addClass('Sticky-Active');
+			}
+		}).trigger('resize');
+	}
+
+	WebFont.load({
+		google: {
+			families: [
+				'Roboto+Condensed:400,700',
+				'Roboto:400,400i,700,700i'
+			]
+		}
+	});
+
 });
