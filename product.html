@@ -3,7 +3,7 @@
 <div class="SiteContent">
 	<div class="Container">
 		<div class="Grid ProductCard {ProductClass}">
-			<div class="Col Col-5-12 Col-Tablet-12-12">
+			<div class="Col Col-5-12 Col-Tablet-12-12 ProductImages Sticky" data-sticky-breakpoint="tablet">
 				{ProductImage}
 				{ProductImageCaption}
 				{ProductThumbnails}
@@ -47,9 +47,18 @@
 				)}
 				<div class="ContentSection">
 					{ProductFullDesc}
-					{ShareButtons}
-					<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
 				</div>
+				{ShareButtons(
+					before: '
+						<div class="ContentSection">',
+					after: '
+							<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
+						</div>',
+					or: '
+						<div class="ContentSection">
+							<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
+						</div>'
+				)}
 				{CrossSaleProducts(
 					limit: '6',
 					type: 'normal',
