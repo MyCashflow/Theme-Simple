@@ -54,6 +54,10 @@
 	width: 50%;
 }
 
+.GridList-Single > .ListItem {
+	width: 100%;
+}
+
 @media screen and (max-width: $breakpoint-desktop) {
 	.GridList > .ListItem {
 		width: 50%;
@@ -61,6 +65,10 @@
 
 	.GridList-Wide > .ListItem {
 		width: 33.33%;
+	}
+
+	.GridList-Single > .ListItem {
+		width: 100%;
 	}
 }
 
@@ -73,11 +81,19 @@
 		padding: ($grid-list-gutter / 2);
 		width: 33.33%;
 	}
+
+	.GridList-Single > .ListItem {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: $breakpoint-mobile-wide) {
 	.GridList > .ListItem {
 		width: 33.33%;
+	}
+
+	.GridList-Single > .ListItem {
+		width: 100%;
 	}
 }
 
@@ -88,6 +104,10 @@
 
 	.GridList-Wide > .ListItem {
 		width: 50%;
+	}
+
+	.GridList-Single > .ListItem {
+		width: 100%;
 	}
 }
 

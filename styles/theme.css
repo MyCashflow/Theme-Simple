@@ -3215,28 +3215,39 @@ form .Active[type='submit'],
 .GridList-Narrow > .ListItem {
   width: 50%; }
 
+.GridList-Single > .ListItem {
+  width: 100%; }
+
 @media screen and (max-width: 1200px) {
   .GridList > .ListItem {
     width: 50%; }
   .GridList-Wide > .ListItem {
-    width: 33.33%; } }
+    width: 33.33%; }
+  .GridList-Single > .ListItem {
+    width: 100%; } }
 
 @media screen and (max-width: 1024px) {
   .GridList {
     margin: -10px; }
   .GridList > .ListItem {
     padding: 10px;
-    width: 33.33%; } }
+    width: 33.33%; }
+  .GridList-Single > .ListItem {
+    width: 100%; } }
 
 @media screen and (max-width: 800px) {
   .GridList > .ListItem {
-    width: 33.33%; } }
+    width: 33.33%; }
+  .GridList-Single > .ListItem {
+    width: 100%; } }
 
 @media screen and (max-width: 600px) {
   .GridList > .ListItem {
     width: 50%; }
   .GridList-Wide > .ListItem {
-    width: 50%; } }
+    width: 50%; }
+  .GridList-Single > .ListItem {
+    width: 100%; } }
 
 .GridList.slick-slider .slick-slide {
   padding: 30px; }
@@ -4910,6 +4921,20 @@ form .Active[type='submit'],
   .ListProduct .ProductImage, .ListProduct #ProductThumbnails .ProductThumbnail, #ProductThumbnails .ListProduct .ProductThumbnail {
     height: 180px;
     line-height: 158px; } }
+
+.GridList-Single .Col.ProductDetails {
+  margin: 20px 0; }
+
+.GridList-Single .ProductName {
+  margin-bottom: 20px; }
+
+.GridList-Single .ProductPrices {
+  font-size: 16px;
+  font-weight: bold; }
+
+@media screen and (max-width: 600px) {
+  .GridList-Single > .ListProduct {
+    margin: 30px 0; } }
 
 #CurrentProductImage {
   border-radius: 2px;

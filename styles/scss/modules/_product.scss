@@ -61,6 +61,31 @@
 }
 
 //------------------------------------------------------------------------------
+// Single column category layout
+//------------------------------------------------------------------------------
+
+.GridList-Single .Col.ProductDetails {
+	margin: $grid-list-gutter 0;
+}
+
+.GridList-Single .ProductName {
+	margin-bottom: $grid-list-gutter;
+}
+
+.GridList-Single .ProductPrices {
+	font-size: $font-size-large;
+	font-weight: bold;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.GridList-Single > .ListProduct {
+		margin: $grid-gutter 0;
+	}
+}
+
+
+
+//------------------------------------------------------------------------------
 // Current Product Image
 //------------------------------------------------------------------------------
 
