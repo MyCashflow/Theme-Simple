@@ -1,3 +1,3 @@
-# MyCashflow Default Theme
+# MyCashflow Simple Theme
 
 We're working on the README.

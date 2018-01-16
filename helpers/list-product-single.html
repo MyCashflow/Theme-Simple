@@ -1,0 +1,59 @@
+<div class="ListItem">
+	<div class="{ProductClass} ListProduct">
+		<div class="Grid">
+			<div class="Col Col-4-12 Col-Mobile-12-12 ProductImages">
+				{ProductImage(
+					imagesize: 'list',
+					link: 'false',
+					before: '<a class="ProductImage" href="{ProductURL}">',
+					after: '</a>'
+				)}
+			</div>
+			<div class="Col Col-8-12 Col-Mobile-12-12 ProductDetails">
+				{ProductName(
+					before: '
+						<h3 class="ProductName">
+							<a href="{ProductURL}">',
+					after: '
+							</a>
+						</h3>'
+				)}
+				{ProductShortDesc(
+					before: '<div class="ProductDescription">',
+					after: '</div>'
+				)}
+				<div class="Flex Flex-Collapse ListFooter">
+					<div class="FlexItem">
+						<div class="ProductPrices">
+							{ProductComparePrice(
+								currencysymbol: 'true',
+								before: '
+									{ProductPrice(
+										currencysymbol: 'true',
+										before: '<span class="ProductDiscountPrice">',
+										after: '</span>'
+									)}
+									<span class="ProductComparePrice">',
+								after: '</span>',
+								or: '
+									{ProductPrice(
+										currencysymbol: 'true',
+										before: '<span class="ProductCurrentPrice">',
+										after: '</span>'
+									)}'
+							)}
+						</div>
+					</div>
+					<div class="FlexSpacer"></div>
+					<div class="FlexItem">
+							{ProductAddToCart}
+					</div>
+				</div>
+			</div>
+		</div>
+		{ProductDiscountPercent(
+			before: '<span class="Badge ProductDiscountPercent">-',
+			after: '&#37;</span>'
+		)}
+	</div>
+</div>
