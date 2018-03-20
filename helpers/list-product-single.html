@@ -5,7 +5,7 @@
 				{ProductImage(
 					imagesize: 'list',
 					link: 'false',
-					before: '<a class="ProductImage" href="{ProductURL}">',
+					before: '<a class="ProductImage" href="{ProductURL}" {ProductLinkData}>',
 					after: '</a>'
 				)}
 			</div>
@@ -13,7 +13,7 @@
 				{ProductName(
 					before: '
 						<h3 class="ProductName">
-							<a href="{ProductURL}">',
+							<a href="{ProductURL}" {ProductLinkData}>',
 					after: '
 							</a>
 						</h3>'
