@@ -1,7 +1,10 @@
 {Notifications(group: 'cart')}
 {CartProducts(
+	or: '{Notifications(group: 'coupon')}{Notifications(group: 'cart')}',
 	before: '
 		<form class="FullCart" action="/cart/update/" method="post">
+			{Notifications(group: 'coupon')}
+			{Notifications(group: 'cart')}
 			<div class="FullCartSection FullCartHeader">
 				<div class="Flex Flex-Collapse">
 					<div class="FlexItem">
@@ -82,7 +85,7 @@
 				<span class="H4 ProductTotal">{CartProductTotal}</span>
 			</div>
 			<div class="FullCartCol FullCartColRemove">
-				<a class="ProductRemove" href="/cart/delete/{CartProductId}">{%Delete}</a>
+				<a class="ProductRemove" href="/cart/delete/{CartProductId}" {ProductLinkData(type: 'remove_from_cart')}>{%Delete}</a>
 			</div>
 		</div>
 	}}

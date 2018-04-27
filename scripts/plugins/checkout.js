@@ -21,6 +21,7 @@
 			'PaymentMethods': []
 		},
 
+		afterInit: function () {},
 		beforeUpdate: function () {},
 		afterUpdate: function () {},
 		beforeUpdatePart: function () {},
@@ -31,6 +32,7 @@
 			this.$form = $(this.formSelector);
 			this.bindEvents();
 			this.runToggles();
+			this.afterInit(this.$form);
 		},
 
 		bindEvents: function () {
@@ -39,6 +41,7 @@
 			this.$form.on('blur', '[data-checkout-part]', $.proxy(this.onBlur, this));
 			this.$form.on('change', '[data-checkout-toggle]', $.proxy(this.onToggle, this));
 			this.$form.on('click', '[data-checkout-clear]', $.proxy(this.onClear, this));
+			this.$form.on('change', '.DefineShippingMethod, .DefinePaymentMethod', $.proxy(this.onDefineMethod, this));
 		},
 
 		onChange: function (evt) {
@@ -83,6 +86,14 @@
 			$target.hide().find(':input:not([type="hidden"])').val('').trigger('change');
 		},
 
+		onDefineMethod: function (evt) {
+			var $target = $(evt.currentTarget);
+			var $input = $target.prev('label').find('> [type="radio"]');
+			if ($input.length) {
+				$input.prop('checked', true);
+			}
+		},
+
 		requestSubmit: function ($part, delay) {
 			clearTimeout($part.data('changeTimeout'));
 			$part.data('changeTimeout', setTimeout($.proxy(function () {
@@ -117,7 +128,7 @@
 		},
 
 		updatePart: function ($part) {
-			var $focused = $part.find(':focus');
+			var $focused = $part.has(':focus');
 			if (!$focused.length) {
 				this.beforeUpdatePart($part);
 				return $.get('/interface/' + this.getPartResponseParams($part))
