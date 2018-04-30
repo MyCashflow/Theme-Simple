@@ -2300,6 +2300,11 @@ input, select, textarea {
   max-width: none;
   width: auto; }
 
+[type='checkbox'], [type='radio'] {
+  all: revert;
+  margin: 0 5px 0 0;
+  vertical-align: middle; }
+
 textarea {
   height: auto;
   resize: none; }
@@ -3950,6 +3955,14 @@ form .Active[type='submit'],
   border: 1px solid #dadada;
   border-radius: 2px;
   padding: 20px; }
+
+.JS input#postal_code {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
+
+input#postal_code + button.Submit {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
 
 .Drawer {
   background-color: #fafafa;

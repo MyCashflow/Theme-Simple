@@ -1,3 +1,4 @@
+{Notifications(group: 'coupon')}
 {Notifications(group: 'cart')}
 {CartProducts(
 	before: '
@@ -82,7 +83,7 @@
 				<span class="H4 ProductTotal">{CartProductTotal}</span>
 			</div>
 			<div class="FullCartCol FullCartColRemove">
-				<a class="ProductRemove" href="/cart/delete/{CartProductId}">{%Delete}</a>
+				<a class="ProductRemove" href="/cart/delete/{CartProductId}" {ProductLinkData(type: 'remove_from_cart')}>{%Delete}</a>
 			</div>
 		</div>
 	}}
