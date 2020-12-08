@@ -60,6 +60,62 @@
 	}
 }
 
+
+//------------------------------------------------------------------------------
+// Product Card Bundles
+//------------------------------------------------------------------------------
+
+.BuyColumnBundle img {
+	background: $color-base-1;
+	border: 1px solid $color-body-border;
+	margin: 0 20px 0 0;
+	max-height: 60px;
+	max-width: 60px;
+	object-fit: contain;
+	padding: 10px;
+}
+
+.BuyColumnBundle {
+	@include flexbox;
+	padding: 10px 0;
+	position: relative;
+}
+
+.CoverLink {
+	@include cover;
+}
+
+.BuyColumnBundlePrice {
+	margin-top: -5px;
+}
+
+//------------------------------------------------------------------------------
+// Product Card Quantity Discounts
+//------------------------------------------------------------------------------
+
+.ProductQuantityDiscounts dt {
+	display: inline-block;
+	margin-top: 0;
+	width: 70px;
+}
+
+.ProductQuantityDiscounts dd {
+	display: inline-block;
+	width: calc(100% - 70px);
+}
+
+//------------------------------------------------------------------------------
+// Product Card Features
+//------------------------------------------------------------------------------
+
+.ProductFeatures {
+  @include flexbox;
+}
+
+.ProductAttributeLabel {
+	margin-right: 5px;
+}
+
 //------------------------------------------------------------------------------
 // Single column category layout
 //------------------------------------------------------------------------------
@@ -82,8 +138,6 @@
 		margin: $grid-gutter 0;
 	}
 }
-
-
 
 //------------------------------------------------------------------------------
 // Current Product Image
