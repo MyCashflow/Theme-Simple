@@ -1,0 +1,13 @@
+//------------------------------------------------------------------------------
+// Footer social media buttons
+//------------------------------------------------------------------------------
+
+.FollowButton {
+	background: darken($color-accent-1, 20%);
+	color: text-contrast($color-accent-1);
+}
+
+.FollowButton:hover {
+	background: $color-accent-1;
+	color: text-contrast($color-accent-1);
+}

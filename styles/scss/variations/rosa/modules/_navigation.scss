@@ -1,0 +1,41 @@
+//------------------------------------------------------------------------------
+// Main navigation
+//------------------------------------------------------------------------------
+
+.MainNavigation a {
+	color: text-contrast($color-header-bg) !important;
+}
+
+.MainNavigation li ul a {
+	color: text-contrast($color-navbar-bg) !important;
+}
+
+.MainNavigation li ul,
+.MainNavigation li ul ul {
+	@include box-shadow(0 -1px 1px $black-10);
+	background: $color-navbar-bg;
+}
+
+.MainNavigation li ul {
+	margin-top: 0;
+}
+
+.MainNavigation li ul ul {
+	margin-left: 0;
+}
+
+.MainNavigation li ul ul li:first-child:before {
+	display: none;
+}
+
+.MainNavigation li ul ul:before {
+	background: $color-navbar-bg;
+	bottom: 0;
+	content: '';
+	display: block;
+	left: -2px;
+	position: absolute;
+	top: 0;
+	width: 2px;
+	z-index: 1000;
+}

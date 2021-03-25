@@ -1,0 +1,15 @@
+//------------------------------------------------------------------------------
+// Form
+//------------------------------------------------------------------------------
+
+.Button {
+	font-family: $font-base-1;
+	font-size: $font-size-large;
+}
+
+.BuyForm .AddToCart::before,
+.Button .fa {
+	font-size: 16px;
+	position: relative;
+	top: -2px;
+}

@@ -1,0 +1,59 @@
+//------------------------------------------------------------------------------
+// Site
+//------------------------------------------------------------------------------
+
+.Site {
+	@include box-shadow(0 0 5px $black-25);
+}
+
+.SiteHeader {
+	margin-bottom: 20px;
+}
+
+.SiteHeader .NavigationBar:after {
+	transition: all ease 0.5s;
+	background: $color-accent-1;
+	content: "";
+	height: 30px;
+	display: block;
+	width: 100%;
+	transform: skewY(1.2deg);
+	position: absolute;
+	bottom: -15px;
+	z-index: -1;
+}
+
+.SiteHeader .NavigationBar.sticky:after {
+	transform: skewY(0deg);
+	bottom: 0;
+	height: 0;
+}
+
+.SiteBody .Banners {
+	margin-top: -18px;
+}
+
+.SiteContent {
+	padding-top: 20px;
+}
+
+.SiteBody .Banners {
+	border: 0;
+}
+
+.SiteBody .Banners:after {
+	background: #ffffff;
+	content: "";
+	height: 30px;
+	display: block;
+	width: 100%;
+	transform: skewY(1.2deg);
+	position: relative;
+	bottom: 13px;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.SiteHeader .NavigationBar:after {
+		bottom: -8px;
+	}
+}

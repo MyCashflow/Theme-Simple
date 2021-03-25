@@ -1,0 +1,17 @@
+$font-base-1:                 'Amatic SC', sans-serif !default;
+
+$font-size:                   14px !default;
+$font-size-small:             12px !default;
+$font-size-large:             20px !default;
+
+$color-accent-1:              #cb5b7d !default;
+$color-accent-2:              lighten($color-accent-1, 15%) !default;
+$color-base-1:                #ffffff !default;
+$color-base-2:                lighten($color-accent-1, 40%) !default;
+
+$color-header-bg:             $color-accent-1 !default;
+$color-navbar-bg:             $color-accent-1 !default;
+
+$color-body-border:           darken($color-base-2, 10%) !default;
+$color-drawer-border:         $color-body-border !default;
+$color-image-border:          $color-body-border !default;

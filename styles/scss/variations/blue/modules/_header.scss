@@ -1,0 +1,17 @@
+//------------------------------------------------------------------------------
+// Site header
+//------------------------------------------------------------------------------
+
+.SiteHeader .InlineNavigation a {
+	color: lighten($color-header-bg, 35%);
+}
+
+.SiteHeader .InlineNavigation a:hover {
+	color: lighten($color-header-bg, 50%);
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.NavigationBar {
+		background-color: $color-accent-1;
+	}
+}

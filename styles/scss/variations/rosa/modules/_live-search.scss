@@ -1,0 +1,12 @@
+//------------------------------------------------------------------------------
+// LiveSearch
+//------------------------------------------------------------------------------
+
+#LiveSearch input,
+#LiveSearch #SearchButton {
+	border-color: darken($color-accent-1, 10%);
+}
+
+.LiveSearchResults a {
+	color: $color-accent-1;
+}
