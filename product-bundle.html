@@ -1,0 +1,56 @@
+{Helper(file: 'helpers/header')}
+{Helper(file: 'helpers/path')}
+<div class="SiteContent">
+	<div class="Container">
+		<div class="Grid ProductCard {BundleClass}">
+			<div class="Col Col-5-12 Col-Tablet-12-12 ProductImages Sticky" data-sticky-breakpoint="tablet">
+				{BundleImage}
+				{BundleImageCaption}
+				{BundleThumbnails}
+			</div>
+			<div class="Col Col-7-12 Col-Tablet-12-12">
+				<div class="ContentSection">
+					<h1>{BundleName}</h1>
+					<p class="Text-Large ProductPrices ProductCardPrices">
+						{BundleComparePrice(
+							currencysymbol: 'true',
+							before: '
+								{BundlePrice(
+									currencysymbol: 'true',
+									before: '<span class="ProductDiscountPrice">',
+									after: '</span>'
+								)}
+								<span class="ProductComparePrice">',
+							after: '</span>',
+							or: '
+								{BundlePrice(
+									currencysymbol: 'true',
+									before: '<span class="ProductCurrentPrice">',
+									after: '</span>'
+								)}'
+						)}
+					</p>
+				</div>
+				<div class="ContentSection">
+					{BundleProducts}
+				</div>
+				<div class="ContentSection">
+					{BundleAvailability}
+					{BundleBuy(variations: 'radio')}
+				</div>
+				{ShareButtons(
+					before: '
+						<div class="ContentSection">',
+					after: '
+							<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
+						</div>',
+					or: '
+						<div class="ContentSection">
+							<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
+						</div>'
+				)}
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}

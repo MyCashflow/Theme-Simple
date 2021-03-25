@@ -31,12 +31,50 @@
 						)}
 					</p>
 					{ProductShortDesc}
-					{ProductBundles}
 				</div>
+				{ProductQuantityDiscounts(
+					before:'
+					<div class="ContentSection">
+						<h3>{Text(code: 'QuantityDiscounts', or: 'Tällä tuotteella on määräalennuksia:')}</h3>
+						<div class="ProductQuantityDiscounts">',
+							after:'
+						</div>
+					</div>'
+				)}
+				{ProductBundles(
+					before: '
+					<div class="ContentSection">
+						<h3>{%ProductIncludesInBundles}</h3>',
+						after: '
+					</div>',
+					helper: '{{
+						<div class="BuyColumnBundle">
+							<a class="CoverLink" href="{BundleUrl}"></a>
+							{BundleImage(link:'false')}
+							<div class="BuyColumnBundleInfo">
+								{BundleName(link:'false',before:'<label for="BuyColumnBundleName">',after: '</label>')}
+								{BundlePrice(before:'<div class="BuyColumnBundlePrice">',after: '</div>')}
+							</div>
+						</div>
+					}}'
+				)}
 				<div class="ContentSection">
 					{ProductAvailability}
 					{ProductBuy(variations: 'radio')}
 				</div>
+				{ProductFeatures(
+					before:'
+					<div class="ContentSection">
+						<h3>{Text(code: 'ProductFeatures', or: 'Tuoteominaisuudet:')}</h3>',
+						after:'
+					</div>',
+					helper: '{{
+						<div class="ProductFeatures">
+							<label class="ProductAttributeLabel">{ProductAttributeLabel}:</label>
+							<span class="ProductAttributeValues">{ProductAttributeValues}</span>
+						</div>
+					}}'
+				)}
 				{AvailabilityNotificationForm(
 					before:'
 						<div class="ContentSection">

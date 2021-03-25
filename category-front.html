@@ -13,8 +13,43 @@
 						after: '</div>'
 					)}
 					{CategoryDescription}
-					{Helper(
-						file: 'helpers/pagination-form'
+					<div class="FiltersPagination">
+						<div class="PaginationBar">
+							<div class="Container">
+								{ProductListFilters(
+									before: '
+									<p class="Hide-Desktop">
+										<a href="#" class="Button Button-Primary FilterButton" data-drawer-toggle="product-filters"><span class="fa fa-sort-amount-asc"></span>   {Text(code: 'ProductFiltersLabel', or: 'Suodata tuotteita')}</a>
+									</p>
+									<div class="ProductListFilters FlexItem Hide-Tablet"><label for="filters">{%SearchFiltersLabel}</label>
+										<div class="Filters">',
+									after: '
+										</div>
+									</div>',
+									helper: '{{
+										{FilterOptions(
+											before: '
+											<div class="FilterGroup">
+												<a class="FilterGroupName" href="#FilterList-{FilterClass}" tabindex="0">{FilterName}</a>
+												<div id="FilterList-{FilterClass}" class="FilterList" tabindex="-1">',
+													after: '
+												</div>
+											</div>'
+										)}
+									}}'
+								)}
+								{Helper(file: 'helpers/pagination-form')}
+							</div>
+						</div>
+					</div>
+					{ProductListFilters(
+						before: '
+							<label>{%ProductFiltersSelected}: </label>
+							<ul class="FilterTags">',
+						after: '
+								<li class="ClearAllFilters"><a href="{CategoryUrl}" class="RemoveFilter">{%ProductFiltersRemove}</a></li>
+							</ul>',
+						helper: 'helpers/filter-tag'
 					)}
 					{CategoryProducts(
 						type: 'normal',
@@ -28,6 +63,20 @@
 						helper: 'helpers/list-product'
 					)}
 				</div>
+				{Bundles(
+					category: '{CategoryId}',
+					type: 'normal',
+					before: '
+					<div class="ContentSection">
+						<h2 class="ContentTitle">{%ProductBundles}</h2>
+						<div class="List ProductList">
+							<div class="GridList GridList-Wide">',
+								after: '
+							</div>
+						</div>
+					</div>',
+					helper: 'helpers/list-bundle'
+				)}
 				{CategoryNewProducts(
 					limit: '15',
 					type: 'normal',
