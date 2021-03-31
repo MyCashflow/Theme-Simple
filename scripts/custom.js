@@ -316,15 +316,4 @@ $(document).ready(function () {
 		});
 	};
 
-	WebFont.load({
-		google: {
-			families: [
-				'Roboto+Condensed:400,700',
-				'Roboto:400,400i,700,700i'
-			]
-		},
-		active: navigationInit,
-		inactive: navigationInit
-	});
-
 });

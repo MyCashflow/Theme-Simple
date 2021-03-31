@@ -2579,7 +2579,7 @@ form .Active[type='submit'],
   color: #fefefe !important; }
 
 .PaginationForm label {
-  display: inline-block;
+  display: block;
   margin-right: 5px; }
 
 .CampaignCodeForm {
@@ -4093,9 +4093,10 @@ input#postal_code + button.Submit {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 30px; }
+    flex: 1;
+    padding: 0; }
   .ProductListFilters label {
-    margin-bottom: 0;
+    flex: 0 0 100%;
     margin-right: 10px; } }
 
 .FiltersPagination {
@@ -4126,7 +4127,8 @@ input#postal_code + button.Submit {
   display: -webkit-flex;
   display: flex;
   align-items: flex-start;
-  justify-content: center; }
+  justify-content: center;
+  padding: 0; }
 
 @media (max-width: 1024px) {
   .PaginationBar .Container, .PaginationBar .ContentRow {
