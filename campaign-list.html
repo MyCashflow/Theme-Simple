@@ -11,42 +11,9 @@
 						before: '<div class="Banner Banner-Body">',
 						after: '</div>'
 					)}
-					{Helper(
-						file: 'helpers/pagination-form'
-					)}
 					{CampaignDescription}
-					<div class="FiltersPagination">
-						<div class="PaginationBar">
-							<div class="Container">
-								{ProductListFilters(
-									before: '
-									<p class="Hide-Desktop">
-										<a href="#" class="Button Button-Primary FilterButton" data-drawer-toggle="product-filters"><span class="fa fa-sort-amount-asc"></span>   {Text(code: 'ProductFiltersLabel', or: 'Suodata tuotteita')}</a>
-									</p>
-									<div class="ProductListFilters FlexItem Hide-Tablet"><label for="filters">{%SearchFiltersLabel}</label>
-										<div class="Filters">',
-									after: '
-										</div>
-									</div>',
-									helper: '{{
-										{FilterOptions(
-											before: '
-											<div class="FilterGroup">
-												<a class="FilterGroupName" href="#FilterList-{FilterClass}" tabindex="0">{FilterName}</a>
-												<div id="FilterList-{FilterClass}" class="FilterList" tabindex="-1">',
-													after: '
-												</div>
-											</div>'
-										)}
-									}}'
-								)}
-								{Helper(file: 'helpers/pagination-form')}
-							</div>
-						</div>
-					</div>
+					{Helper(file: 'helpers/product-list-filters')}
 					{Products(
-						campaign: '{CampaignID}',
-						pagination: 'false',
 						type: 'normal',
 						before: '
 							<div class="List ProductList">
