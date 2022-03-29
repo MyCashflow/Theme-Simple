@@ -21,12 +21,10 @@
 		<Doctype standard="HTML5" />
 	</Settings>
 	<ThemeSettings>
-		<SettingGroup label="colors" description="colors_description">
-			<Setting type="select" name="color_theme" label="color_theme" default="theme">
-				<Option value="theme-blue" label="Blue" />
-				<Option value="theme-rosa" label="Rosa" />
-				<Option value="theme" label="White" />
-			</Setting>
-		</SettingGroup>
+		<Setting type="select" name="color_theme" label="color_theme" default="theme">
+			<Option value="theme-blue" label="Blue" />
+			<Option value="theme-rosa" label="Rosa" />
+			<Option value="theme" label="White" />
+		</Setting>
 	</ThemeSettings>
 </Theme>
