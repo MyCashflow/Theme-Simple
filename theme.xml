@@ -20,4 +20,11 @@
 	<Settings>
 		<Doctype standard="HTML5" />
 	</Settings>
+	<ThemeSettings>
+		<Setting type="select" name="color_theme" label="color_theme" default="theme">
+			<Option value="theme-blue" label="Blue" />
+			<Option value="theme-rosa" label="Rosa" />
+			<Option value="theme" label="White" />
+		</Setting>
+	</ThemeSettings>
 </Theme>
